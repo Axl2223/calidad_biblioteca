@@ -1,6 +1,7 @@
 # Sistema de Biblioteca
 
-API REST desarrollada en Java + Spring Boot para analizar la calidad de software.
+API REST desarrollada en Java + Spring Boot para analizar la calidad de software
+
 
 Funcionalidades:
 - Alta de usuarios
