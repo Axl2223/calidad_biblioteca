@@ -20,8 +20,8 @@
     <properties>
         <java.version>17</java.version>
 
-        <sonar.organization>DejaBoom</sonar.organization>
-        <sonar.projectKey>DejaBoom_calidad_biblioteca</sonar.projectKey>
+        <sonar.organization>df4ced1d3c62b4ee494bebc5c0371ad8d32379be</sonar.organization>
+        <sonar.projectKey>df4ced1d3c62b4ee494bebc5c0371ad8d32379be_calidad_biblioteca</sonar.projectKey>
 
         <sonar.coverage.jacoco.xmlReportPaths>
             ${project.build.directory}/site/jacoco/jacoco.xml
