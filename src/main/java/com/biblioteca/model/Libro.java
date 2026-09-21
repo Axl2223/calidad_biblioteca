@@ -60,23 +60,15 @@ public class Libro {
         this.prestado = prestado;
     }
 
+    private boolean esInvalido(String texto) {
+        return texto == null || texto.isBlank();
+    }
+
     public String prestar() {
 
         final String result_negative = "No se puede prestar";
 
-        if (titulo == null) {
-            return result_negative;
-        }
-
-        if (titulo.isEmpty()) {
-            return result_negative;
-        }
-
-        if (autor == null) {
-            return result_negative;
-        }
-
-        if (autor.isEmpty()) {
+        if (esInvalido(titulo) || esInvalido(autor)) {
             return result_negative;
         }
 
