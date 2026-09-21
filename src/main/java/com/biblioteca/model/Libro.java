@@ -62,20 +62,22 @@ public class Libro {
 
     public String prestar() {
 
+        final result_negative = "No se puede prestar"
+
         if (titulo == null) {
-            return "No se puede prestar";
+            return result_negative;
         }
 
         if (titulo.isEmpty()) {
-            return "No se puede prestar";
+            return result_negative;
         }
 
         if (autor == null) {
-            return "No se puede prestar";
+            return result_negative;
         }
 
         if (autor.isEmpty()) {
-            return "No se puede prestar";
+            return result_negative;
         }
 
         if (prestado) {
