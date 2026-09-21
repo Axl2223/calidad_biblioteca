@@ -62,7 +62,7 @@ public class Libro {
 
     public String prestar() {
 
-        final result_negative = "No se puede prestar"
+        final result_negative = "No se puede prestar ahora"
 
         if (titulo == null) {
             return result_negative;
