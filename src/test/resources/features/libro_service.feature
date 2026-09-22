@@ -3,24 +3,20 @@ Característica: Cobertura de LibroService
 
   # --- CREAR LIBRO ---
 
-  #--  Ejercicio 1 (Crear un libro exitosamente con crearLibro)
+  #-- Ejercicio 1 (Crear un libro exitosamente con crearLibro)
   Escenario: Crear un libro exitosamente
-    Dado que se ingresan los datos de un libro con titulo "Project Hail Mary" y autor "Andy Wier"
-    Cuando se solicita crear el libro mediante crearLibro
-    Entonces el libro se crea exitosamente con estado no prestado
+    Cuando ejecuto crearLibro con título "Project Hail Mary" y autor "Andy Wier"
+    Entonces el libro resultante no es nulo y tiene título "Project Hail Mary"
 
   #-- Ejercicio 2 (Mostrar un Error cuando el titulo está en blanco (isBlank())
   Escenario: Mostrar un error cuando el título está en blanco
-    Dado que se ingresan los datos de un libro con titulo "   " y autor "Andy Wier"
-    Cuando se solicita crear el libro mediante crearLibro
-    Entonces se debe mostrar un error indicando que el titulo no puede estar en blanco
+    Cuando intento crearLibro con título "   " y autor "Andy Wier"
+    Entonces se lanza una excepción con mensaje "El título no puede estar en blanco"
 
   #-- Ejercicio 3 (Mostrar un Error cuando el titulo es nulo isNull())
   Escenario: Mostrar un error cuando el título es nulo
-    Dado que se ingresan los datos de un libro con titulo nulo y autor "Andy Wier"
-    Cuando se solicita crear el libro mediante crearLibro
-    Entonces se debe mostrar un error indicando que el título no puede ser nulo
-  
+    Cuando intento crearLibro con título "" y autor "Andy Wier"
+    Entonces se lanza una excepción con mensaje "El título no puede ser nulo"
 
   Escenario: Error en crearLibro cuando el autor es nulo
     Cuando intento crearLibro con título "El Aleph" y autor nulo
